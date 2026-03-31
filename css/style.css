@@ -212,3 +212,21 @@ main section.equipo p {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+
+#contacto-page form {
+    width: 400px;
+    margin: 40px auto; 
+}
+
+#contacto-page input, select, textarea, button {
+    display: block;
+    width: 100%;  
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+#contacto-page label {
+    display: block;
+    margin-top: 10px;
+}
