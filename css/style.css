@@ -140,3 +140,75 @@ footer {
 .copyright p {
     text-align: middle;
 }
+
+/* SECCIÓN EQUIPO */
+main section.equipo {
+    width: 100% !important; 
+    margin: 0; 
+    padding: 50px 3;
+    border: none;
+}
+
+main section.equipo h1 {
+    color: var(--marron) !important;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+main section.equipo p {
+    color: var(--verde) !important;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+
+
+/* Agrupa los 5 integrantes*/
+.contenedor-equipo {
+    display: block;
+    text-align: center; 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* Estilo individual*/
+.Tarjeta {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-width: 250px;
+    margin: 15px;
+    text-align: left;
+}
+
+
+
+/* Estilo de las imágenes */
+.Tarjeta img {
+    width: 90%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    border-radius: 15px; 
+    background-color: var(--gris-claro); 
+    margin-bottom: 15px;
+    border: 1px solid var(--gris-claro);
+}
+
+/* Nombres de los integrantes */
+.Tarjeta h3 {
+    color: var(--marron);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+/* Estilo del rol */
+.Tarjeta .puesto {
+    color: black !important;
+    font-weight: bold;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
