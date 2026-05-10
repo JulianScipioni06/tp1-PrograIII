@@ -1,3 +1,4 @@
+/* VARIABLES */
 :root {
     --verde: #4f5d3d;
     --marron: #7d5c3e;
@@ -12,37 +13,31 @@
     font-family: "Inter", sans-serif;
 }
 
-/* Header */
+/* HEADER Y NAVBAR */
 header {
     width: auto;
     background-color: var(--verde);
     padding: 10px;
 }
 
-#logo-menu{
+#logo-menu {
     display: inline-block;
     width: 20%;
     vertical-align: middle;
 }
 
-#logo-menu h1{
-    display: inline-block;
-    color: var(--blanco);
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-#logo-menu img{
+#logo-menu img {
     display: inline-block;
     width: 60px;
     border-radius: 25%;
     vertical-align: middle;
 }
 
-nav a {
-    text-decoration: none;
+#logo-menu h1 {
+    display: inline-block;
     color: var(--blanco);
-    margin: 8px;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 #menu {
@@ -52,11 +47,17 @@ nav a {
     vertical-align: middle;
 }
 
-#menu li{
+#menu li {
     display: inline-block;
     width: max-content;
     margin: 1px;
     padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    margin: 8px;
 }
 
 #menu li a {
@@ -72,7 +73,7 @@ nav a {
     background-color: var(--blanco);
 }
 
-/* Main */
+/* MAIN */
 main {
     background-color: var(--blanco);
     border-top: 6px solid var(--gris-claro);
@@ -82,7 +83,7 @@ main section {
     width: 40%;
     margin: 20px;
     padding: 20px;
-    height: auto ;
+    height: auto;
 }
 
 main section p {
@@ -90,41 +91,198 @@ main section p {
     margin-bottom: 10px;
 }
 
-#inicio-productos {
-    padding: 10px;
-    margin-right: 10px;
-    background-color: var(--marron);
-    border: 2px solid var(--gris-claro);
-    border-radius: 6px;
-}
-
-#inicio-productos:hover {
-    background-color: var(--marron);
-}
-
-#inicio-productos a {
-    color: var(--blanco);
-    text-decoration: none;
-}
-
+/* BOTONES INICIO */
+#inicio-productos,
 #inicio-equipo {
     padding: 10px;
     margin-right: 10px;
-    background-color: var(--verde);
     border: 2px solid var(--gris-claro);
     border-radius: 6px;
 }
 
-#inicio-equipo:hover {
-    background-color: var(--verde);
-}
-
+#inicio-productos a,
 #inicio-equipo a {
     color: var(--blanco);
     text-decoration: none;
 }
 
-/* footer */
+#inicio-productos {
+    background-color: var(--marron);
+}
+
+#inicio-productos:hover {
+    background-color: var(--marron); 
+}
+
+#inicio-equipo {
+    background-color: var(--verde);
+}
+
+#inicio-equipo:hover {
+    background-color: var(--verde); 
+}
+
+/* TARJETAS DE PRODUCTOS */
+.contenedor-tarjetas {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.tarjeta-servicio {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    min-width: 165px;
+    margin: 0.5%;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 50px;
+    border: 2px solid var(--verde);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+    text-align: left;
+}
+
+.contenido-tarjeta h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    min-height: 55px;
+}
+
+.contenido-tarjeta p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    min-height: 85px;
+}
+
+.titulo_materiales {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--verde);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+/* PÁGINAS ESPECÍFICAS */
+
+/* SECCIÓN EQUIPO */
+main section.equipo {
+    width: 100% !important;
+    margin: 0;
+    padding: 50px 0; 
+    border: none;
+}
+
+main section.equipo h1 {
+    color: var(--marron) !important;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+main section.equipo p {
+    color: var(--verde) !important;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.contenedor-equipo {
+    display: block;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.Tarjeta {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-width: 250px;
+    margin: 15px;
+    text-align: left;
+}
+
+.Tarjeta img {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: var(--gris-claro);
+    margin-bottom: 15px;
+    border: 1px solid var(--gris-claro);
+}
+
+.Tarjeta h3 {
+    color: var(--marron);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.Tarjeta .puesto {
+    color: black !important;
+    font-weight: bold;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* PÁGINA CONTACTO */
+#contacto-page form {
+    width: 400px;
+    margin: 40px auto;
+}
+
+#contacto-page input,
+#contacto-page select,
+#contacto-page textarea,
+#contacto-page button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+#contacto-page label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* FOOTER */
 footer {
     height: 10vh;
     background-color: var(--marron);
@@ -138,77 +296,5 @@ footer {
 }
 
 .copyright p {
-    text-align: middle;
-}
-
-/* SECCIÓN EQUIPO */
-main section.equipo {
-    width: 100% !important; 
-    margin: 0; 
-    padding: 50px 3;
-    border: none;
-}
-
-main section.equipo h1 {
-    color: var(--marron) !important;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-
-main section.equipo p {
-    color: var(--verde) !important;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-
-
-
-/* Agrupa los 5 integrantes*/
-.contenedor-equipo {
-    display: block;
-    text-align: center; 
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
-
-/* Estilo individual*/
-.Tarjeta {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    min-width: 250px;
-    margin: 15px;
-    text-align: left;
-}
-
-
-
-/* Estilo de las imágenes */
-.Tarjeta img {
-    width: 90%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-    border-radius: 15px; 
-    background-color: var(--gris-claro); 
-    margin-bottom: 15px;
-    border: 1px solid var(--gris-claro);
-}
-
-/* Nombres de los integrantes */
-.Tarjeta h3 {
-    color: var(--marron);
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-/* Estilo del rol */
-.Tarjeta .puesto {
-    color: black !important;
-    font-weight: bold;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    vertical-align: middle; 
 }
