@@ -1,0 +1,30 @@
+/* BOTONES INICIO */
+#inicio-productos,
+#inicio-equipo {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--gris-claro);
+    border-radius: 6px;
+}
+
+#inicio-productos a,
+#inicio-equipo a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+#inicio-productos {
+    background-color: var(--marron);
+}
+
+#inicio-productos:hover {
+    background-color: var(--marron); 
+}
+
+#inicio-equipo {
+    background-color: var(--verde);
+}
+
+#inicio-equipo:hover {
+    background-color: var(--verde); 
+}
