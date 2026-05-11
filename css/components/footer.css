@@ -1,0 +1,15 @@
+footer {
+    height: 10vh;
+    background-color: var(--marron);
+    border-top: 6px solid var(--gris-claro);
+}
+
+.copyright {
+    color: var(--blanco);
+    margin-top: 25px;
+    text-align: center;
+}
+
+.copyright p {
+    vertical-align: middle; 
+}

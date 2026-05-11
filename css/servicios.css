@@ -1,0 +1,47 @@
+@import url(./style.css);
+
+/*General*/
+main {
+    background-color: var(--blanco);
+    border-top: 6px solid var(--gris-claro);
+}
+main h1{
+    padding: 10px;
+}
+.card-container{
+    width: 55%;
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+    display: flex;
+}
+main section p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#buscador-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#buscador {
+    width: 40%;
+    padding: 10px 20px;
+    border: 2px solid var(--gris-claro);
+    border-radius: 20px;
+    background-color: var(--blanco);
+    font-size: 1rem;
+    color: var(--verde);
+    outline: none;
+}
+
+#buscador:focus {
+    border-color: var(--verde);
+}
+
+#buscador::placeholder {
+    color: var(--marron);
+    opacity: 0.9;
+}
