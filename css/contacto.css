@@ -2,22 +2,21 @@
 
 /* PÁGINA CONTACTO */
 #contacto-page form {
-    width: 400px;
-    margin: 40px auto;
+  width: 400px;
+  margin: 40px auto;
 }
 
 #contacto-page input,
 #contacto-page select,
 #contacto-page textarea,
 #contacto-page button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 7px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 7px;
 }
 
 #contacto-page label {
-    display: block;
-    margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 }
-

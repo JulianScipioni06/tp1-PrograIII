@@ -14,7 +14,7 @@ async function getServicios() {
     mostrarSpinner()
     try {
 
-      
+        await new Promise(resolve => setTimeout(resolve, 700));
 
         const response = await fetch("../js/servicios.json")
         const data = await response.json()
@@ -52,7 +52,7 @@ function mostrarProductos(lista, contenedor){
                     ${etiquetas}
                 </div>
             </div>
-            <p class="precio">$${producto.precio}</p>
+            <p class="precio"> Precio: $${producto.precio}</p>
         `
         contenedor.append(div)
     })
