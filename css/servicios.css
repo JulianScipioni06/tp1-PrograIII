@@ -111,22 +111,28 @@ main h1 {
   transition: all 0.3s ease;
 }
 
-.precio {
-  font-weight: 600;
-  font-family: "Arial", sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.5px;
+#buscador-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
-  margin: 16px auto 0;
-  padding: 12px;
+#buscador {
+    width: 40%;
+    padding: 10px 20px;
+    border: 2px solid var(--gris-claro);
+    border-radius: 20px;
+    background-color: var(--blanco);
+    font-size: 1rem;
+    color: var(--verde);
+    outline: none;
+}
 
-  color: #222;
+#buscador:focus {
+    border-color: var(--verde);
+}
 
-  border-radius: 8px;
-
-  width: 85%;
-  text-align: center;
-  box-sizing: border-box;
-
-  letter-spacing: 0.5px;
+#buscador::placeholder {
+    color: var(--marron);
+    opacity: 0.9;
 }
