@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/favicon/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/equipo.css">
-    <title>Equipo</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+    <title>Perfil</title>
 </head>
+
 <body>
     <header>
         <!-- Logo -->
@@ -25,43 +26,51 @@
                     <li><a href="../pages/equipo.html">Equipo</a></li>
                     <li><a href="../pages/faq.html">Preguntas Frecuentes</a></li>
                     <li><a href="../pages/contacto.html">Contacto</a></li>
-                    <li><a href="../pages/login.html">Perfil</a></li>
+                    <li><a href="/index.html">Volver</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="equipo">
-            <h1> Nuestro Equipo</h1>
-            <p>"Unidos por el diseño, el código y la pasión por un buen mate cebado."</p>
+        <section class="perfil-container">
 
-            <div class="contenedor-equipo">
+        <h1></h1>
 
-                <div class="Tarjeta">
-                    <img src="../assets/img/integrante1.png" alt="Cacho">
-                    <h3>Facundo "Cacho" Morales</h3>
-                    <P class ="puesto">Especialista en Curado y Materiales </P>
+        <div class="perfil-card">
+            <div class="perfil-info">
+                    <h2>Información Personal</h2>
+
+                    <p>
+                        <strong>Nombre:</strong>
+                        <span id="nombre"></span>
+                    </p>
+
+                    <p>
+                        <strong>Apellido:</strong>
+                        <span id="apellido"></span>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <span id="email"></span>
+                    </p>
+
                 </div>
-
-                <div class="Tarjeta">
-                    <img src="../assets/img/integrante2.png" alt="Lucas El Cebador Benítez">
-                    <h3>Lucas "El Cebador" Benítez</h3>
-                    <P class ="puesto">Arquitecto de Identidad Visual</P>
+                    <button  class = "tab-btn" id="logout-btn" type="button">
+                        Cerrar Sesión
+                    </button>
                 </div>
-
-                <div class="Tarjeta">
-                    <img src="../assets/img/integrante3.png"alt="Santiago Santi Diaz">
-                    <h3>Santiago "Santi" Diaz</h3>
-                    <P class ="puesto">Estratega de Comunidad y Marketing Matero </P>
-                </div>
-            </div>
         </section>
     </main>
+
     <footer>
         <div class="copyright">
             <p>Copyright © 2026. Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <script src="../js/perfil.js"></script>
+
 </body>
 </html>

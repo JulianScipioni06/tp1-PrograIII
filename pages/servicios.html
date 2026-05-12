@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/favicon/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/servicios.css">
     <title>Nuestro Servicio</title>
 </head>
 <body>
@@ -17,153 +17,44 @@
             </h1>
         </div>
 
-        <!-- Navbar -->
+    <!-- Navbar -->
         <div id="menu">
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="pedido.html">Pedido</a></li>
-                    <li><a href="equipo.html">Equipo</a></li>
-                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="../pages/servicios.html">Servicios</a></li>
+                    <li><a href="../pages/pedido.html">Pedido</a></li>
+                    <li><a href="../pages/equipo.html">Equipo</a></li>
+                    <li><a href="../pages/faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a href="../pages/login.html">Perfil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <div id="spinner">
+            <div class="circulo-carga"></div>
+                <p>Cargando productos...</p>
+        </div>
+        <div id="buscador-container">
+        <input type="text" id="buscador" placeholder="Buscar producto...">
+        </div>
         <section id="mates">
-            <h1>
-                Nuestros Mates
-            </h1>
-            <div class="contenedor-tarjetas">
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/mate-imperial.jpg" alt="Mate Imperial" title="Mate Imperial" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Mate Imperial</h3>
-                        <p>El clásico argentino con virola cincelada y costuras a mano</p>
-                        <p class="titulo-materiales">Disponible en:</p>
-                        <div class="contenedor-etiquetas">
-                            <span class="etiqueta"> Calabaza </span>
-                            <span class="etiqueta"> Algarrobo </span>
-                            <span class="etiqueta"> Acero </span>
-                        </div>
-                    </div>
-                    <p class="precio">$50.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/mate-camionero-algarrobo.jpg" alt="Mate Camionero" title="Mate Camionero" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Mate Camionero</h3>
-                        <p>Boca ancha, ideal para mates largos sin que se lave la yerba</p>
-                        <p class="titulo-materiales">Disponible en:</p>
-                            <span class="etiqueta">Calabaza</span>
-                            <span class="etiqueta">Algarrobo</span>
-                            <span class="etiqueta">Acero</span>
-                        </div>
-                    <p class="precio">$45.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/mate-torpedo-4.jpg" alt="Mate Torpedo" title="Mate Torpedo" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Mate Torpedo</h3>
-                        <p>Es el favorito para lograr una montaña perfecta</p>
-                        <p class="titulo-materiales">Disponible en:</p>
-                            <span class="etiqueta">Calabaza</span>
-                            <span class="etiqueta">Algarrobo</span>
-                            <span class="etiqueta">Acero</span>
-                    </div>
-                    <p class="precio">$45.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/mate-criollo.jpg" alt="Mate Criollo" title="Mate Criollo" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Mate Criollo</h3>
-                        <p>Diseño clásico y rústico, ideal para cebar con comodidad</p>
-                        <p class="titulo-materiales">Disponible en:</p>
-                            <span class="etiqueta">Calabaza</span>
-                            <span class="etiqueta">Algarrobo</span>
-                            <spam class="etiqueta">Acero</spam>
-                    </div>
-                    <p class="precio">$40.000</p>
-                </div>
-            </div>
+            <h1>Nuestros Mates</h1>
+            <div id = "contenedor-mates" class="card-container"></div>
         </section>
-
         <section id="bombillas">
-            <h1>
-                Nuestras bombillas
-            </h1>
-            <div class="contenedor-tarjetas">
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/bombillon-alpaca-2.png" alt="Bombillon de Alpaca" title="Bombillon de Alpaca" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Bombillon de Alpaca</h3>
-                        <p>Caño ancho que garantiza un flujo de agua perfecto.</p>
-                    </div>
-                    <p class="precio">$25.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/bombillon-acero-2.jpg" alt="Bombillon de Acero Inoxidable" title="Bombillon Acero Inoxidable" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Bombillon de Acero Inoxidable</h3>
-                        <p>Maxima durabilidad, su amplio filtro evita que se tape</p>
-                    </div>
-                    <p class="precio">$25.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/bombilla-pico-loro-alpaca.png" alt="Bombilla Pico Loro Alpaca" title="Bombilla Pico Loro Alpaca" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Bombilla Pico Loro de Alpaca</h3>
-                        <p>Diseño ergonomico que descansa perfecto en la boca</p>
-                    </div>
-                    <p class="precio">$20.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/bombilla-pico-loro-acero-3.jpg" alt="Bombilla Pico Loro Acero Inoxidable" title="Bombilla Pico Loro Acero Inoxidable" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Bombilla Pico Loro Acero Inoxi.</h3>
-                        <p>Comodidad de diseño curvo junto a la resistencia del acero</p>
-                    </div>
-                    <p class="precio">$20.000</p>
-                </div>
-            </div>
+            <h1>Nuestras bombillas</h1>
+            <div id="contenedor-bombillas" class="card-container"></div>
         </section>
-
         <section id="canastas">
-            <h1>
-                Nuestras Materas
-            </h1>
-            <div class="contenedor-tarjetas">
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/bolso-matero.jpg" alt="Bolso Matero" title="Bolso Matero" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Bolso Matero</h3>
-                        <p>Practico, seguro y espacioso. Para llevar tu termo, mate y latas</p>
-                    </div>
-                    <p class="precio">$10.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/canasta-cuero.jpg" alt="Canasta Cuero" title="Canasta de Cuero" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Canasta de Cuero</h3>
-                        <p>Elegancia y resistencia. Elaborada y cosida a mano</p>
-                    </div>
-                    <p class="precio">$15.000</p>
-                </div>
-                <div class="tarjeta-servicio">
-                    <img src="../assets/img/canasta-ecocuero.jpg" alt="Canasta Ecocuero" title="Canasta de Ecocuero" class="imagen-tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h3>Canasta de Ecocuero</h3>
-                        <p>Liviana, facil de limpiar y libre de crueldad animal</p>
-                    </div>
-                    <p class="precio">$15.000</p>
-                </div>
-            </div>
+            <h1>Nuestras Materas</h1>
+            <div id="contenedor-canastas" class="card-container"></div>
         </section>
+                
     </main>
-
     <footer>
         <div class="copyright">
             <p>
@@ -171,5 +62,6 @@
             </p>
         </div>
     </footer>
+    <script type="module" src="../js/servicios.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+[
+    { "id": 1, "desc": "Mate Imperial", "detalle": "El clásico argentino con virola cincelada y costuras a mano", "precio": 50000, "imagen": "mate-imperial.jpg", "categoria": "mate", "materiales": ["Calabaza", "Algarrobo", "Acero"] },
+    { "id": 2, "desc": "Mate Camionero", "detalle": "Boca ancha, ideal para mates largos sin que se lave la yerba", "precio": 45000, "imagen": "mate-camionero-algarrobo.jpg", "categoria": "mate", "materiales": ["Calabaza", "Algarrobo", "Acero"] },
+    { "id": 3, "desc": "Mate Torpedo", "detalle": "Es el favorito para lograr una montaña perfecta", "precio": 45000, "imagen": "mate-torpedo-4.jpg", "categoria": "mate", "materiales": ["Calabaza", "Algarrobo", "Acero"] },
+    { "id": 4, "desc": "Mate Criollo", "detalle": "Diseño clásico y rústico, ideal para cebar con comodidad", "precio": 40000, "imagen": "mate-criollo.jpg", "categoria": "mate", "materiales": ["Calabaza", "Algarrobo", "Acero"] },
+    { "id": 5, "desc": "Mate Pera", "detalle": "Forma ergonómica que se adapta perfecto a la mano", "precio": 48000, "imagen": "matepera.webp", "categoria": "mate", "materiales": ["Calabaza", "Algarrobo"] },
+    { "id": 6, "desc": "Bombillon de Alpaca", "detalle": "Caño ancho que garantiza un flujo de agua perfecto", "precio": 25000, "imagen": "bombillon-alpaca-2.png", "categoria": "bombilla", "materiales": ["Alpaca"] },
+    { "id": 7, "desc": "Bombillon de Acero Inoxidable", "detalle": "Maxima durabilidad, su amplio filtro evita que se tape", "precio": 25000, "imagen": "bombillon-acero-2.jpg", "categoria": "bombilla", "materiales": ["Acero Inoxidable"] },
+    { "id": 8, "desc": "Bombilla Pico Loro de Alpaca", "detalle": "Diseño ergonomico que descansa perfecto en la boca", "precio": 20000, "imagen": "bombilla-pico-loro-alpaca.png", "categoria": "bombilla", "materiales": ["Alpaca"] },
+    { "id": 9, "desc": "Bombilla Pico Loro Acero Inoxidable", "detalle": "Comodidad de diseño curvo junto a la resistencia del acero", "precio": 20000, "imagen": "bombilla-pico-loro-acero-3.jpg", "categoria": "bombilla", "materiales": ["Acero Inoxidable"] },
+    { "id": 10, "desc": "Bolso Matero", "detalle": "Practico, seguro y espacioso. Para llevar tu termo, mate y latas", "precio": 10000, "imagen": "bolso-matero.jpg", "categoria": "matera", "materiales": ["Tela"] },
+    { "id": 11, "desc": "Canasta de Cuero", "detalle": "Elegancia y resistencia. Elaborada y cosida a mano", "precio": 15000, "imagen": "canasta-cuero.jpg", "categoria": "matera", "materiales": ["Cuero"] },
+    { "id": 12, "desc": "Canasta de Ecocuero", "detalle": "Liviana, facil de limpiar y libre de crueldad animal", "precio": 15000, "imagen": "canasta-ecocuero.jpg", "categoria": "matera", "materiales": ["Ecocuero"] },
+    { "id": 13, "desc": "Matera Térmica", "detalle": "Mantiene la temperatura del termo y tiene bolsillo para la yerba", "precio": 18000, "imagen": "matera-termica.jpg", "categoria": "matera", "materiales": ["Tela", "Aluminio"] }
+]

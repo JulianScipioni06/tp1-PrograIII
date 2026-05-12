@@ -1,0 +1,56 @@
+@import url(./style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 20px;           
+}
+
+.perfil-container {
+    width: 100%;
+    max-width: 450px; 
+    background-color: var(--gris-claro);
+    padding: 4%;
+    border-radius: 20px;
+    box-shadow: 7px 7px #000;
+}
+
+.perfil-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px; 
+}
+
+.perfil-info h2 {
+    margin-bottom: 15px; 
+}
+
+.perfil-info p {
+    margin-bottom: 10px;
+}
+
+#logout-btn {
+    display: block;
+    width: 100%; 
+    padding: 10px; 
+}
