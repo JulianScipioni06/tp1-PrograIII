@@ -2,6 +2,9 @@ const contenedorMates = document.querySelector('#contenedor-mates')
 const contenedorBombillas = document.querySelector('#contenedor-bombillas')
 const contenedorCanastas = document.querySelector('#contenedor-canastas')
 const spinner = document.querySelector('#spinner')
+const buscador = document.querySelector('#buscador')
+
+let todosLosProductos = [] //guarda todos los productos y los muestra al cargar la pagina
 
 function mostrarSpinner(){ //Mostramos el simbolo de carga
     spinner.style.display = 'flex'
@@ -10,22 +13,49 @@ function ocultarSpinner(){ //Ocultamos el simbolo de carga
     spinner.style.display = 'none'
 }
 
-async function getServicios() {
-    mostrarSpinner()
-    try {
+function filtrar(data) {
+    const busqueda = buscador.value.toLowerCase()
+    
+    contenedorMates.innerHTML = ''
+    contenedorBombillas.innerHTML = ''
+    contenedorCanastas.innerHTML = ''
 
-      
-
-        const response = await fetch("../js/servicios.json")
-        const data = await response.json()
-
+    if (busqueda === '') { // muestra las secciones normales
         const mates = data.filter(item => item.categoria === "mate")
         const bombillas = data.filter(item => item.categoria === "bombilla")
         const canastas = data.filter(item => item.categoria === "matera")
 
-        mostrarProductos(mates , contenedorMates)
-        mostrarProductos(bombillas , contenedorBombillas)
-        mostrarProductos(canastas,contenedorCanastas)
+        mostrarProductos(mates, contenedorMates)
+        mostrarProductos(bombillas, contenedorBombillas)
+        mostrarProductos(canastas, contenedorCanastas)
+    } else { // muestra todos los resultados juntos arriba
+        mostrarProductos(data, contenedorMates)
+    }
+}
+
+buscador.addEventListener('input', () => { // filtra lo que busca el usuario
+    const busqueda = buscador.value.toLowerCase()
+    const filtrados = todosLosProductos.filter(producto =>
+        producto.desc.toLowerCase().includes(busqueda) ||
+        producto.categoria.toLowerCase().includes(busqueda)
+    )
+    document.querySelector('#mates h1').style.display = busqueda === '' ? 'block' : 'none'// hace que no aparezcan los titulos cuando el usuario busca
+    document.querySelector('#bombillas h1').style.display = busqueda === '' ? 'block' : 'none'
+    document.querySelector('#canastas h1').style.display = busqueda === '' ? 'block' : 'none'
+
+    filtrar(filtrados)
+})
+
+async function getServicios() {
+    mostrarSpinner()
+    try {
+
+
+        const response = await fetch("../js/servicios.json")
+        const data = await response.json()
+
+        todosLosProductos = data
+        filtrar(data)
         
     } catch (error) {
         console.log("Error al cargar los servicios", error)
@@ -52,7 +82,7 @@ function mostrarProductos(lista, contenedor){
                     ${etiquetas}
                 </div>
             </div>
-            <p class="precio">$${producto.precio}</p>
+            <p class="precio"> Precio: $${producto.precio}</p>
         `
         contenedor.append(div)
     })

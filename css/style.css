@@ -7,15 +7,15 @@
 
 /* VARIABLES */
 :root {
-    --verde: #4f5d3d;
-    --marron: #7d5c3e;
-    --blanco: #f5f2e9;
-    --gris-claro: #eae3d2;
+  --verde: #4f5d3d;
+  --marron: #7d5c3e;
+  --blanco: #f5f2e9;
+  --gris-claro: #eae3d2;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
