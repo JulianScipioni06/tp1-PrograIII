@@ -20,15 +20,20 @@ function filtrar(data) {
     contenedorBombillas.innerHTML = ''
     contenedorCanastas.innerHTML = ''
 
-    if (busqueda === '') { // muestra las secciones normales
+    if (busqueda === '') { 
         const mates = data.filter(item => item.categoria === "mate")
         const bombillas = data.filter(item => item.categoria === "bombilla")
-        const canastas = data.filter(item => item.categoria === "matera")
+        
+        const canastas = data.filter(item => 
+            item.categoria === "matera" || 
+            item.categoria === "termo" || 
+            item.categoria === "accesorio"
+        )
 
         mostrarProductos(mates, contenedorMates)
         mostrarProductos(bombillas, contenedorBombillas)
         mostrarProductos(canastas, contenedorCanastas)
-    } else { // muestra todos los resultados juntos arriba
+    } else { 
         mostrarProductos(data, contenedorMates)
     }
 }
@@ -49,9 +54,10 @@ buscador.addEventListener('input', () => { // filtra lo que busca el usuario
 async function getServicios() {
     mostrarSpinner()
     try {
+        const response = await fetch("https://tp3-prograiii-backend.onrender.com/servicios")
 
+        await new Promise(resolve => setTimeout(resolve, 1000))
 
-        const response = await fetch("../js/servicios.json")
         const data = await response.json()
 
         todosLosProductos = data
