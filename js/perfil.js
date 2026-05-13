@@ -1,56 +1,59 @@
 const nombre = document.getElementById("nombre");
-const apellido = document.getElementById("apellido");
 const email = document.getElementById("email");
+const fechaRegistro = document.getElementById("fecha-registro");
+const fotoPerfil = document.getElementById("foto-perfil");
+const listaPedidos = document.getElementById("lista-pedidos");
 
-// Obtener usuario guardado
-const usuario = JSON.parse(localStorage.getItem("usuario"));
+// Obtener el ID que guardamos en el login
+const usuarioId = sessionStorage.getItem("usuarioId");
 
-// Si no existe usuario, volver al login
-if (!usuario) {
-
+if (!usuarioId) {
     window.location.href = "./login.html";
+} else {
+    cargarPerfilUsuario();
 }
 
-/*
-futura validacion backend
+async function cargarPerfilUsuario() {
+    try {
+        const respuesta = await fetch(`https://tp3-prograiii-backend.onrender.com/usuarios/${usuarioId}`);
+        
+        if (!respuesta.ok) {
+            throw new Error("No se pudo obtener el perfil");
+        }
 
-fetch("http://localhost:3000/perfil", {
+        const dataUsuario = await respuesta.json();
 
-    method: "GET",
+        nombre.textContent = dataUsuario.nombre;
+        email.textContent = dataUsuario.email;
+        fechaRegistro.textContent = dataUsuario.fecha_registro;
+        
+        fotoPerfil.src = `../assets/img/${dataUsuario.foto}`;
 
-    headers: {
-        "Content-Type": "application/json",
+        listaPedidos.innerHTML = "";
+        
+        if (dataUsuario.ultimos_pedidos && dataUsuario.ultimos_pedidos.length > 0) {
+            dataUsuario.ultimos_pedidos.forEach(pedido => {
+                const li = document.createElement("li");
+                li.style.marginBottom = "10px";
+                li.innerHTML = `<strong>${pedido.articulo}</strong> - Orden #${pedido.nro_orden} <br> <small>${pedido.fecha}</small>`;
+                listaPedidos.appendChild(li);
+            });
+        } else {
+            listaPedidos.innerHTML = "<li>Aún no tienes pedidos.</li>";
+        }
 
-        // Ejemplo JWT/token
-        Authorization: `Bearer ${token}`
+    } catch (error) {
+        console.error("Error al cargar los datos:", error);
+        // Si falla, borramos la sesión y lo mandamos al login
+        sessionStorage.removeItem("usuarioId");
+        window.location.href = "./login.html";
     }
-})
-.then((respuesta) => respuesta.json())
-.then((data) => {
+}
 
-    console.log(data);
-});
-*/
-
-// Mostrar datos usuario
-nombre.textContent = usuario.nombre;
-apellido.textContent = usuario.apellido;
-email.textContent = usuario.email;
-
-// Logout
 const botonLogout = document.getElementById("logout-btn");
 
 botonLogout.addEventListener("click", () => {
+    sessionStorage.removeItem("usuarioId");
 
-    /*
-    fetch("http://localhost:3000/logout", {
-        method: "POST"
-    });
-    */
-
-    // Limpiar sesión frontend
-    localStorage.removeItem("usuario");
-
-    // Volver al login
     window.location.href = "./login.html";
 });

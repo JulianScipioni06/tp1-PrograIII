@@ -1,0 +1,39 @@
+@import url(./style.css);
+
+.seccion-inicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+    height: 100%;            
+    padding: 40px 20px;
+    background-color: var(--blanco); 
+}
+
+.seccion-inicio h1 {
+    color: var(--marron);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.seccion-inicio p {
+    color: var(--verde);
+    font-size: 1.2rem;
+    max-width: 800px;        
+    margin-bottom: 40px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.botones-inicio {
+    display: flex;
+    gap: 20px;           
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botones-inicio a {
+    text-decoration: none;
+}
