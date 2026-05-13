@@ -32,24 +32,28 @@
         </div>
     </header>
 
-    <main id="contacto-page">
-        <form action="">
-                <label for="nombre">Nombre:</label> 
-                <input type="text" id="nombre" name="nombre" required>
+    <main>
+        <section id="form-contacto">
+            <h2>¡Dejanos tu mensaje!</h2>
+            <form action="#">
+                <label for="nombre-contacto">Nombre:</label>
+                <input type="text" id="nombre-contacto" name="nombre" placeholder="Ej: Juan" required>
 
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
+                <label for="apellido-contacto">Apellido:</label>
+                <input type="text" id="apellido-contacto" name="apellido" placeholder="Ej: Perez" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email-contacto" name="email" placeholder="Ej: juanperez@gmail.com" required>
 
                 <label for="comentarios">Comentarios:</label>
                 <textarea id="comentarios"></textarea>
 
-                <button type="submit">Enviar</button>
-                <button type="reset">Reset</button>
-            
+                <div class="form-buttons">
+                    <button type="submit" class="tab-btn">Enviar Pedido</button>
+                    <button type="reset" class="tab-btn btn-reset">Borrar Todo</button>
+                </div>
             </form> 
+        </section>
     </main>
 
     <footer>
