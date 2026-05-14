@@ -1,0 +1,51 @@
+@import url(./style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    padding: 40px 20px;     
+}
+
+#seccion-faq {
+    width: 100%;
+    max-width: 600px; 
+}
+
+#seccion-faq h1 {
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+#preguntasFre details {
+    margin-bottom: 15px; 
+    padding: 15px 20px; 
+    background-color: var(--gris-claro); 
+    border-radius: 10px;
+    box-shadow: 7px 7px #000;
+}
+
+#preguntasFre summary {
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+
+#preguntasFre p {
+    margin-top: 15px;
+    padding-left: 20px; 
+    line-height: 1.5; 
+}

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/favicon/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Realizar Pedido</title>
+    <link rel="stylesheet" href="../css/pedido.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <title>Realizar Pedido - Cultura Matera</title>
 </head>
 <body>
     <header>
-        <!-- Logo -->
         <div id="logo-menu">
-            <img src="../assets/favicon/logo.png" alt="">
+            <img src="../assets/favicon/logo.png" alt="Logo Cultura Matera">
             <h1>Cultura Matera</h1>
         </div>
 
-        <!-- Navbar -->
         <div id="menu">
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="pedido.html">Pedido</a></li>
-                    <li><a href="equipo.html">Equipo</a></li>
-                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="../pages/servicios.html">Servicios</a></li>
+                    <li><a href="../pages/pedido.html">Pedido</a></li>
+                    <li><a href="../pages/equipo.html">Equipo</a></li>
+                    <li><a href="../pages/faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a href="../pages/login.html">Perfil</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,70 +32,66 @@
 
     <main>
         <section id="form-pedido">
-            <form>
-                <h1>Hace tu pedido!</h1>
-                <label>Datos del Cliente</label>
-                <br>
-                <input type="text" placeholder="Nombre y Apellido">
-                <input type="number" placeholder="Telefono">
-                <input type="date">
+            <form action="#">
+                <h1>Tu Pedido Personalizado</h1>
                 
-                <h2>Selecciona los Productos</h2>
-                <h3>Mates</h3>
-                <br>
-                <label for="">Tipo:</label>
-                <select>
-                    <option value="">Seleccione una opcion...</option>
-                    <option value="">Imperial</option>
-                    <option value="">Camionero</option>
-                    <option value="">Torpedo</option>
-                    <option value="">Criollo</option>
+                <h2>Datos del Cliente</h2>
+                <label for="nombre-pedido">Nombre Completo:</label>
+                <input type="text" id="nombre-pedido" name="nombre" placeholder="Ej: Leandro Ripa" required>
+                
+                <label for="fecha-pedido">Fecha de Entrega Deseada:</label>
+                <input type="date" id="fecha-pedido" name="fecha">
+
+                <h2>Personalización del Mate</h2>
+                
+                <h3>Tamaño</h3>
+                <div class="opciones-radio">
+                    <input type="radio" id="talle-s" name="tamanio" value="S"> <label for="talle-s">S</label>
+                    <input type="radio" id="talle-m" name="tamanio" value="M"> <label for="talle-m">M</label>
+                    <input type="radio" id="talle-l" name="tamanio" value="L"> <label for="talle-l">L</label>
+                    <input type="radio" id="talle-xl" name="tamanio" value="XL"> <label for="talle-xl">XL</label>
+                </div>
+
+                <h3>Material del Mate</h3>
+                <select id="material-mate" name="material">
+                    <option value="" disabled selected>Seleccioná un material</option>
+                    <option value="calabaza">Calabaza</option>
+                    <option value="acero">Acero Inoxidable</option>
+                    <option value="algarrobo">Algarrobo</option>
                 </select>
-                <br>
-                <label for="">Color:</label>
-                <select>
-                    <option value="">Seleccione una opcion...</option>
-                    <option value="">Negro</option>
-                    <option value="">Marron</option>
-                </select>
-                <br>
-                <label for="">Tamaño</label>
-                <br>
-                <label for="">S</label>
-                <input type="checkbox">
-                <label for="">M</label>
-                <input type="checkbox">
-                <label for="">L</label>
-                <input type="checkbox">
-                <label for="">XL</label>
-                <input type="checkbox">
-                <br>
-                <label for="">Material:</label>
-                <select>
-                    <option value="">Seleccione una opcion...</option>
-                    <option value="">Calabaza</option>
-                    <option value="">Acero</option>
-                    <option value="">Algorrobo</option>
-                </select>
-                <br><br>
                 
                 <h3>Bolsos y Materas</h3>
-                <ul>
-                    <li><label for="">Bolso Matero </label><input type="checkbox"></li>
-                    <li><label for="">Canasta de Cuero </label><input type="checkbox"></li>
-                    <li><label for="">Canaste de Ecocuero </label><input type="checkbox"></li>
+                <ul class="lista-productos">
+                    <li>
+                        <label for="bolso">Bolso Matero</label>
+                        <input type="checkbox" id="bolso" name="accesorio" value="bolso">
+                    </li>
+                    <li>
+                        <label for="canasta-cuero">Canasta de Cuero</label>
+                        <input type="checkbox" id="canasta-cuero" name="accesorio" value="canasta-cuero">
+                    </li>
+                    <li>
+                        <label for="canasta-eco">Canasta de Ecocuero</label>
+                        <input type="checkbox" id="canasta-eco" name="accesorio" value="canasta-eco">
+                    </li>
                 </ul>
-                <br>
+
                 <h3>Bombillas y Bombillones</h3>
-                <br>
-                <ul>
-                    <li><label for="">Bombillon de Alpaca </label><input type="checkbox"></li>
-                    <li><label for="">Bombillon de Acero Inoxidable </label><input type="checkbox"></li>
-                    <li><label for="">Bombilla Pico Loro Alpaca </label><input type="checkbox"></li>
-                    <li><label for="">Bombilla Pico Loro Acero Inoxidable </label><input type="checkbox"></li>
+                <ul class="lista-productos">
+                    <li>
+                        <label for="bomb-alpaca">Bombillón de Alpaca</label>
+                        <input type="checkbox" id="bomb-alpaca" name="bombilla" value="alpaca">
+                    </li>
+                    <li>
+                        <label for="bomb-acero">Bombillón de Acero Inoxidable</label>
+                        <input type="checkbox" id="bomb-acero" name="bombilla" value="acero">
+                    </li>
                 </ul>
-                <button type="submit">Enviar Pedido</button>
-                <button type="submit">Borrar Todo</button>
+
+                <div class="form-buttons">
+                    <button type="submit" class="tab-btn">Enviar Pedido</button>
+                    <button type="reset" class="tab-btn btn-reset">Borrar Todo</button>
+                </div>
             </form>
         </section>
     </main>

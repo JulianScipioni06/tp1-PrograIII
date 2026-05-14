@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Cultura Matera</title>
     <link rel="shortcut icon" href="./assets/favicon/logo.png" type="image/x-icon">
     <meta name="description" content="Contáctanos en Cultura Matera. Tienes dudas o sugerencias? ¡Estamos aquí para ayudarte!"/>
 </head>
 <body>
     <header>
-        <!-- Logo -->
         <div id="logo-menu">
             <img src="./assets/favicon/logo.png" alt="">
             <h1>Cultura Matera</h1>
         </div>
-
-        <!-- Navbar -->
         <div id="menu">
             <nav>
                 <ul>
@@ -26,19 +23,23 @@
                     <li><a href="./pages/equipo.html">Equipo</a></li>
                     <li><a href="./pages/faq.html">Preguntas Frecuentes</a></li>
                     <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="./pages/login.html">Ingresar / Perfil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section>
+        <section class="seccion-inicio">
             <h1>Bienvenidos!</h1>
             <p>
                 Somos Cultura Matera! Somos un emprendimiento de mates, formado por un grupo de amigos el cual busca llegar a la mayor cantidad de personas, con productos de alta calidad. Conoce mas sobre nuestros productos. Conoce mas Sobre Nosotros.
             </p>
-            <button id="inicio-productos"><a href="./pages/servicios.html">Nuestros Productos</a></button>
-            <button id="inicio-equipo"><a href="./pages/equipo.html">Sobre Nosotros</a></button>
+            
+            <div class="botones-inicio">
+                <a href="./pages/servicios.html" class="tab-btn" id="inicio-productos">Nuestros Productos</a>
+                <a href="./pages/equipo.html" class="tab-btn" id="inicio-equipo">Sobre Nosotros</a>
+            </div>
         </section>
     </main>
 

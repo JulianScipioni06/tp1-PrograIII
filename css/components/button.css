@@ -1,0 +1,21 @@
+.tab-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    gap: 8px;
+    border-radius: 4px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tab-btn:hover {
+    background-color:var(--marron);
+    color: var(--blanco);
+    box-shadow: 0 4px 8px #000000;
+    transition: background-color 0.3s;
+}

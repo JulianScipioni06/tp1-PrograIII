@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacto.css">
     <title>Cultura Matera</title>
     <link rel="shortcut icon" href="../assets/favicon/logo.png" type="image/x-icon">
     <meta name="description" content="Contáctanos en Cultura Matera. Tienes dudas o sugerencias? ¡Estamos aquí para ayudarte!"/>
@@ -16,39 +16,44 @@
             <h1>Cultura Matera</h1>
         </div>
 
-        <!-- Navbar -->
+    <!-- Navbar -->
         <div id="menu">
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="pedido.html">Pedido</a></li>
-                    <li><a href="equipo.html">Equipo</a></li>
-                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="../pages/servicios.html">Servicios</a></li>
+                    <li><a href="../pages/pedido.html">Pedido</a></li>
+                    <li><a href="../pages/equipo.html">Equipo</a></li>
+                    <li><a href="../pages/faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a href="../pages/login.html">Perfil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="contacto-page">
-        <form action="">
-                <label for="nombre">Nombre:</label> 
-                <input type="text" id="nombre" name="nombre" required>
+    <main>
+        <section id="form-contacto">
+            <h2>¡Dejanos tu mensaje!</h2>
+            <form action="#">
+                <label for="nombre-contacto">Nombre:</label>
+                <input type="text" id="nombre-contacto" name="nombre" placeholder="Ej: Juan" required>
 
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
+                <label for="apellido-contacto">Apellido:</label>
+                <input type="text" id="apellido-contacto" name="apellido" placeholder="Ej: Perez" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email-contacto" name="email" placeholder="Ej: juanperez@gmail.com" required>
 
                 <label for="comentarios">Comentarios:</label>
                 <textarea id="comentarios"></textarea>
 
-                <button type="submit">Enviar</button>
-                <button type="reset">Reset</button>
-            
+                <div class="form-buttons">
+                    <button type="submit" class="tab-btn">Enviar Pedido</button>
+                    <button type="reset" class="tab-btn btn-reset">Borrar Todo</button>
+                </div>
             </form> 
+        </section>
     </main>
 
     <footer>
